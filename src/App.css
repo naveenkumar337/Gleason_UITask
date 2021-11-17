@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+body {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body-section {
+  background-color: #f7f7f7
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.carousel-item.active {
+  width: 100%;
+  animation-duration: 1s;
+  /* background-color: coral; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes fadeInRight {
   from {
-    transform: rotate(0deg);
+    margin-left: 100%;
+    width: 300%;
   }
   to {
-    transform: rotate(360deg);
+    margin-left: 0%;
+    width: 100%;
   }
+}
+
+.sidebar-menu {
+  height: 100vh !important;
+}
+
+.sidebar {
+  /* z-index: 0;
+  left:220px; */
+  width: 0 !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+  margin-left: -15px;
+  transition: all 0.5s ease;
+  background-color: white !important;
+  box-shadow: 5px 1px #e1dede;
+}
+
+.sidebar.toggle {
+  width: 220px !important;
+  position: relative;
+  /* padding-left: 220px; */
+  margin-left: 0;
+  left: 0px;
+}
+
+.list-group-item {
+  color: white !important;
+  cursor: pointer;
+  background-color: white !important;
+  position: relative;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.list-group-item:hover {
+  background-color: lightgray !important;
+}
+
+.carousel-item.active {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+.badge {
+  float: right;
+}
+
+.form-div {
+  box-shadow: 2px 1px 2px gray;
+}
+
+.login-form {
+  box-shadow: 2px 2px 5px gray;
 }
